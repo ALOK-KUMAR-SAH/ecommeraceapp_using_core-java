@@ -1,0 +1,21 @@
+CREATE DATABASE ecommerce;
+USE ecommerce;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    stock INT NOT NULL
+);
+
+-- Insert Sample Products
+INSERT INTO products (name, price, stock) VALUES
+('Laptop', 59999.99, 10),
+('Smartphone', 29999.99, 15),
+('Tablet', 19999.99, 20);
